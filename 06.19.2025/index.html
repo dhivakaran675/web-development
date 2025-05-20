@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Office Testimonials</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      padding: 20px;
+    }
+
+    .testimonials {
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .testimonials h2 {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 10px;
+    }
+
+    .testimonials p {
+      text-align: center;
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 30px;
+    }
+
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 20px;
+    }
+
+    .testimonial {
+      background-color: #fff;
+      border-radius: 12px;
+      padding: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .testimonial-text {
+      margin-bottom: 20px;
+      font-size: 0.95rem;
+      line-height: 1.5;
+    }
+
+    .testimonial-author {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .testimonial-author img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #ddd;
+    }
+
+    .author-info h4 {
+      margin: 0;
+      font-size: 1rem;
+    }
+
+    .author-info p {
+      margin: 2px 0 0;
+      font-size: 0.85rem;
+      color: #777;
+    }
+  </style>
+</head>
+
+<body>
+  <section class="testimonials">
+    <h2>What Our Team Says</h2>
+    <p>Hear from some of the amazing people we work with</p>
+
+    <div class="testimonial-grid">
+      <div class="testimonial">
+        <p class="testimonial-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio
+          adipisci, libero dignissimos, dolorem doloribus consequuntur
+          recusandae corrupti praesentium et, sequi eos. Alias, veritatis!
+          Nihil quos magnam corporis.
+        </p>
+        <div class="testimonial-author">
+          <img src="IRON MAN.jpg" alt="IRON MAN" />
+          <div class="author-info">
+            <h4>IRON MAN</h4>
+            <p>TECH GUY AND RICH</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="testimonial">
+        <p class="testimonial-text">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque odio
+          adipisci, libero dignissimos, dolorem doloribus consequuntur
+          recusandae corrupti praesentium et, sequi eos. Alias, veritatis!
+          Nihil quos magnam corporis.
+        </p>
+        <div class="testimonial-author">
+          <img src="CAPTAIN AMERICA.jpg" alt="CAPTAIN AMERICA" />
+          <div class="author-info">
+            <h4>CAPTAIN AMERICA</h4>
+            <p>CAPTAIN OF AVENGERS</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

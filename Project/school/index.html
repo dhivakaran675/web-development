@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>casagrand international school website</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      line-height: 2;
+      background-color: crimson;
+      color: #333;
+    }
+    header {
+      background: white;
+      color: black;
+      text-align: center;
+      padding: 24px;
+    }
+    header h1 {
+      font-size: 40px;
+    }
+    header p {
+      font-style: italic;
+    }
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+    }
+    nav ul li {
+      margin: 8px;
+    }
+    nav ul li a {
+      text-decoration: none;
+      color: white;
+      background-color: #007bff;
+      padding: 8px 16px;
+      border-radius: 5px;
+    }
+    nav ul li a:hover {
+      background-color: #0056b3;
+    }
+    .section {
+      padding: 35px;
+      max-width: 70%;
+      margin: auto;
+      margin-top: 20px;
+      background-color: white;
+      border-radius: 10px;
+
+    }
+    .colorful {
+      text-align: center;
+      line-height: 4;
+      font-size: 20px;
+      background: white;
+      color: black;
+    }
+    .banner {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 16px
+    }
+    .two-column {
+      display: flex;
+      gap: 32px;
+      flex-wrap: wrap;
+    }
+    .two-column div {
+      flex: 1;
+      min-width: 280px;
+    }
+    table,
+    th,
+    td {
+      border: 1px solid crimson;
+      padding: 16px;
+      text-align: left;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 16px;
+    }
+    .cards {
+      display: flex;
+      gap: 16px;
+    }
+    .card {
+      flex: 2;
+      min-width: 200px;
+      background-color: #ffeb3b;
+      padding: 16px;
+      border-radius: 10px;
+      text-align: center;
+      font-weight: bold;
+      color: black;
+    }
+    .grid .gallery {
+      display: grid;
+      grid-template-columns: auto auto auto;
+      gap: 16px;
+      margin-top: 16px;
+    }
+
+    .gallery img {
+      width: 100%;
+      border-radius: 10px;
+      height: 150px;
+      object-fit: cover;
+    }
+    .icons ul {
+      list-style: none;
+      display: flex;
+      gap: 32px;
+    }
+    .icons ul li {
+      font-size: 20px;
+      background-color: crimson;
+      padding: 16px;
+      border-radius: 10px;
+      min-width: 150px;
+      text-align: center;
+      color: white;
+    }
+    marquee {
+    background-color: #ffe0b2;
+    padding: 8px;
+    font-weight: bold;
+    margin-bottom: 16px;
+    border-radius: 5px;
+  }
+  footer {
+    text-align: center;
+    padding: 16px;
+    background-color: #007bff;
+    color: beige;
+    margin-top: 32px;
+    border-radius: 10px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Casagrand international school</h1>
+    <p>Nuturing happy children</p>
+    <nav>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#academics">Academics</a></li>
+        <li><a href="#achievements">Achievements</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#student-life">Student Life</a></li>
+        <li><a href="#notices">Notice Board</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="home" class="section colorful">
+    <h2>Welcome to Casagrand international school</h2>
+    <img src="12.11.jpeg" alt="School Banner" class="banner" />
+  </section>
+
+  <section id="about" class="section two-column">
+    <div>
+      <h2>About Us</h2>
+      <p>Casagrand international schoolwas established in 2017 with a mission to provide quality education in a nurturing
+        HAPPY CHILDREN.</p>
+      <p><strong>Principal's Message:</strong> We aim to inspire the students through lifeskill.</p>
+    </div>
+    <div>
+      <h3>Vision & Mission</h3>
+      <ul>
+        <li>Empowering through education</li>
+        <li>the students should know lifskill</li>
+        <li>making the students to learn and inspire</li>
+        <li>MAKING THE YOUNGSTERS INTO THE FUTURE OF INDIA</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="academics" class="section">
+    <h2>Academics</h2>
+    <table>
+      <tr>
+        <th>Grade</th>
+        <th>Subjects</th>
+      </tr>
+      <tr>
+        <td>1-5</td>
+        <td>Math, English, Science, EVS, III LANGUAGE, II LANGUAGE, PHYSICAL EDUCATION.</td>
+      </tr>
+      <tr>
+        <td>6-8</td>
+        <td>Math, Science, Social, Computers, FRENCH, HINDI, PHYSICAL EDUCATION, TAMIL.</td>
+      </tr>
+      <tr>
+        <td>9-10</td>
+        <td>Math, Science, SST, English, Hindi, FRENCH, ROBOTICS,TAMIL.</td>
+      </tr>
+    </table>
+  </section>
+
+  <section id="achievements" class="section colorful">
+    <h2>Achievements</h2>
+    <div class="cards">
+      <div class="card">runner up on rubik's cube competition-2024</div>
+      <div class="card">Top 10 CBSE Schools in Region</div>
+      <div class="card">Best happy nuturing childrenCampus Award</div>
+    </div>
+  </section>
+  <section id="gallery" class="section grid">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="12.6.jpeg" alt="Event 1">
+      <img src="12.7.jpeg" alt="Event 2">
+      <img src="12.8.jpeg" alt="Event 3">
+      <img src="12.9.jpeg" alt="Event 4">
+      <img src="12.10.jpeg" alt="Event 5">
+    </div>
+    <br>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/7mZoBHU74Nk?si=voKrO0wp_pXuTEIg"
+     title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  </section>
+  <section id="student-life" class="section icons">
+    <h2>student-life</h2>
+    <p>We offer a wide variety of clubs and sports for holistic development.</p>
+    <ul>
+      <li><i class="fas fa-theater-masks"></i><br>theatre Club</li>
+      <li><i class="fas fa-futbol"></i><br>batminton,cricket & Football</li>
+      <li><i class="fas fa-paint-brush"></i><br>Art & Craft</li>
+      <li><i class="fas fa-music"></i><br>Music(vocal & instruments) & Dance</li>
+    </ul>
+  </section>
+  <section id="notices" class="section">
+    <h2>Notice Board</h2>
+    <marquee>Admissions Open for 2025-26 | starts march 25 | ends on apr 28</marquee>
+    <ul>
+      <li>Summer Break starts Apr 16</li>
+      <li>Reopening on june 9</li>
+    </ul>
+  </section>
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>📍 160 happy lane, mambakkam, tamilnadu, india.</p>
+    <p>📞 +91 8939 3936 72</p>
+    <p>📧 contact@casagrandint.nut</p>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3890.015033648234!2d80.14726427484351!3d12.842304917700256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5259c0ddd63b63%3A0x2caf1956f6b94ea4!2sCasagrand%20International%20School%20-%20Kelambakkam%20-%20Vandalur%20Road%20Campus!5e0!3m2!1sen!2sin!4v1744198478568!5m2!1sen!2sin"
+     width="1000" height="450" style="border: 10px;;" allowfullscreen="" 
+     loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+  <footer>
+    <p>&copy; 2025 Casagrand international school. nuturing happy children.</p>
+  </footer>
+</body>
+
+</html>

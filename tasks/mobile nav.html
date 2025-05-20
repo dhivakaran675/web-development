@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ul {
+            background-color: crimson;
+            overflow: hidden;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            display: inline-block;
+        }
+
+        li a {
+            color: white;
+            padding: 14px 16px;
+            display: block;
+            text-decoration: none;
+        }
+
+        li a:hover {
+            background-color: black;
+        }
+
+        .menu-toggle {
+            display: none;
+            background-color: red;
+            color: white;
+            padding: 14px 16px;
+            cursor: pointer;
+            text-align: center;
+        }
+
+        @media (max-width:600px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            ul {
+                display: none;
+                width: 100%;
+            }
+
+            ul.show {
+                display: block;
+            }
+
+            li {
+                display: block;
+                text-align: center;
+            }
+        }
+            </style>
+</head>
+
+<body>
+    <div class="menu-toggle" onclick="togglemenu()">mobile menu</div>
+    <ul id="nav">
+        <li><a href="#cholan mess">CHOLAN MESS</a></li>
+        <li><a href="# star biriyani">STAR BIRIYANI</a></li>
+        <li><a href="# thalapakathi">THALAPAKATHI</a></li>
+    </ul>
+    <script>
+        function togglemenu() {
+            document.getElementById('nav').classList.toggle('show')
+        }
+    </script>
+</body>
+
+</html>

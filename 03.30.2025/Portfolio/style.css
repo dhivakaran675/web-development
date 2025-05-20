@@ -1,0 +1,30 @@
+.about-me-div{
+    text-align: center;
+    padding-top: 40px;
+    height: 100px;
+    vertical-align: middle;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 48px;
+    color: aliceblue;
+    border-radius: 5px;
+    border: 1px solid white;
+    background-color: rgb(45, 57, 75);
+}
+.second-section{
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+    margin-top: 18px;
+}
+.ss-left-side{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    border: 1px solid white;
+    background-color: rgb(33, 172, 160);
+    width: 70%;
+    border-radius: 10px;
+    padding: 20px;
+    color: white;
+}
+.football-image{
+    border-radius: 10px;
+}

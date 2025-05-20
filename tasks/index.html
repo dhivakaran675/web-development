@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHOLAN MESS - GIVE REBIRTH TO YOUR TONGUE</title>
+    <style>
+        body {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: #f9f9f9;
+        }
+
+        ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+            background-color: #333;
+        }
+
+        li {
+            float: left;
+        }
+
+        li a {
+            display: block;
+            padding: 14px 16px;
+            text-decoration: none;
+            color: white;
+        }
+
+        li a:hover {
+            background-color: greenyellow;
+        }
+
+        section {
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .menu-items,
+        .gallery,
+        .reviews {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        .about {
+            text-align: center;
+            color: greenyellow;
+        }
+
+        .cholan {
+            color: white;
+            text-align: center;
+            background-image: url('cholan mess.jpg');
+            background-size: cover;
+            height: 80vh;
+        }
+
+        button {
+            background-color: greenyellow;
+            border: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: darkgreen;
+            color: white;
+        }
+
+        .reviews {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .reviews .card {
+            width: 300px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+
+        .reviews p {
+            font-style: italic;
+        }
+
+        .reviews h4 {
+            text-align: center;
+            color: darkgreen;
+        }
+
+        .our {
+            color: greenyellow;
+        }
+
+        .img {
+            width: 200px;
+            height: 250px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="cholan mess">CHOLAN MESS</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#reviews">Reviews</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="cholan">
+        <br><br><br><br>
+        <h1 class="highlight">TASTE AUTHENTIC CHETTINADU FOODS</h1><br><br><br><br>
+        <br><br><br><br>
+        <h2 class="tiny">GIVE REBIRTH TO YOUR TONGUE</h2><br><br><br><br>
+        <br><br><br><br>
+        <button onclick="document.getElementById('menu').scrollIntoView({behavior: 'smooth'});">OUR
+            MENU</button><br><br><br><br>
+    </div>
+
+    <h1 class="about">About Us</h1>
+    <h3><br>CHOLAN MESS WAS OPENED AND OWNED BY P. DHIVAKARAN. IN THE START, IT WAS JUST A CART IN MADURAI, BUT NOW IT
+        IS A RESTAURANT, AND IT ONLY SERVES CHETTINAD DISHES. THE AMBIENCE IS IN A RETRO SETUP. THIS IS THE INFORMATION
+        ABOUT US.</h3>
+    <h3>OUR SPECIAL ITEMS ARE PORICHA PORATTA, MUTTON KOTTU PORATTA, SEERAGA SAMBA MUTTON BIRYANI, TENDER COCONUT
+        PUDDING, PAYASAM, NOOL PORATTA, PICHI POTA NATU KOLI, CHETTINAD MUTTON GRAVY, GRAPE PULP JUICE, KIZHI PORATTA.
+        THESE ARE OUR SPECIAL ITEMS.</h3>
+
+    <section id="menu">
+        <h2 class="our">OUR MENU</h2>
+        <div class="menu-items">
+            <div class="card">
+                <img src="boti fry.jpg" alt="AATHU KUDAL GRAVY">
+                <h3>AATHU KUDAL GRAVY</h3>
+                <p>A NORMAL GRAVY MADE UP OF GOAT INTESTINE</p>
+                <p>₹120</p>
+            </div>
+            <div class="card">
+                <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI">
+                <h3>MUTTON SEERAGA SAMBA BIRIYANI</h3>
+                <p>SPICED AND FLAVORFUL RICE WITH SOFT MUTTON</p>
+                <p>₹200</p>
+            </div>
+            <div class="card">
+                <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA">
+                <h3>KIZHI POORATTA</h3>
+                <p>A NORMAL POORATTA MARINATED IN CHICKEN OR MUTTON GRAVY</p>
+                <p>₹180</p>
+            </div>
+            <div class="card">
+                <img src="pooricha pooratta.jpg" alt="POORICHA POORATTA">
+                <h3>POORICHA POORATTA</h3>
+                <p>DEEP FRIED POORATTA</p>
+                <p>₹50 (one set)</p>
+            </div>
+            <div class="card">
+                <img src="chettinaad mutton gravy.jpg" alt="CHETTINAAD MUTTON OR CHICKEN GRAVY">
+                <h3>CHETTINAAD MUTTON OR CHICKEN GRAVY</h3>
+                <p>VERY SPICY GRAVY WITH MUTTON OR CHICKEN</p>
+                <p>₹230</p>
+            </div>
+            <div class="card">
+                <img src="elanipayasam.jpg" alt="ELANI PAYASAM">
+                <h3>ELANI PAYASAM</h3>
+                <p>A PAYASAM MADE UP OF TENDER COCONUT</p>
+                <p>₹60</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="our">FOOD GALLERY</h2>
+        <div class="gallery">
+            <img class="img" src="boti fry.jpg" alt="Boti fry">
+            <img class="img" src="kizhi pooratta.jpg" alt="Kizhi pooratta">
+            <img class="img" src="chettinaad mutton gravy.jpg" alt="Chettinaad mutton or chicken gravy">
+            <img class="img" src="elanipayasam.jpg" alt="Elani payasam">
+        </div>
+    </section>
+
+    <section id="reviews">
+        <h2 class="our">CUSTOMER REVIEWS</h2>
+        <div class="reviews">
+            <div class="card">
+                <p>"The best SOUTH Indian food in town! Their KIZHI POORATTA is amazing."</p>
+                <h4>ARUN</h4>
+            </div>
+            <div class="card">
+                <p>"Authentic flavors and reasonable prices. Love their MUTTON SEERAGA SAMBA BIRIYANI!"</p>
+                <h4>DHIVAKARAN</h4>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>CHOLAN MESS<br>ANNA NAGAR<br>TAMIL NADU, India</p>
+            <p>Phone: +91 8939393575</p>
+            <p>Opening Hours: Mon-Fri: 11am - 10pm | Sat-Sun: 12pm - 11pm</p>
+        </section>
+        <p>&copy; 2025 CHOLAN MESS. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>

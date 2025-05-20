@@ -1,0 +1,25 @@
+h3{
+color: orange;
+background-color: blueviolet;
+}
+
+h1{
+    color: red;
+    text-align: center;
+    background-color: aqua;
+} 
+body{
+    background-image: url(https://img.freepik.com/free-photo/3d-cartoon-character_23-2151021932.jpg?ga=GA1.1.381268922.1743394566&semt=ais_hybrid);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+h4{
+color: cornsilk;    
+text-align: center;
+background-color: aqua;
+}
+h2{
+color: aqua;    
+text-align: justify;
+background-color: aquamarine;
+}
