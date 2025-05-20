@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simple Responsive Footer</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .footer {
+      background: #1f1f1f;
+      color: #ccc;
+      padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      gap: 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+
+    .footer-box {
+      flex: 1 1 250px;
+    }
+
+    .footer-box h3 {
+      color: #4caf50;
+      margin-bottom: 10px;
+    }
+
+    .footer-box ul {
+      list-style: none;
+      padding: 0;
+      font-size: 14px;
+    }
+
+    .footer-box ul li {
+      margin-bottom: 8px;
+    }
+
+    .footer-box ul li a {
+      color: #ccc;
+      text-decoration: none;
+    }
+
+    .footer-box ul li a:hover {
+      color: #fff;
+    }
+
+    .footer-logo img {
+      width: 120px;
+      margin-bottom: 10px;
+    }
+
+    .footer-contact p {
+      margin: 6px 0;
+      font-size: 14px;
+    }
+
+    .map iframe {
+      width: 100%;
+      height: 160px;
+      border: none;
+      border-radius: 6px;
+    }
+
+    .footer-bottom {
+      text-align: center;
+      color: #777;
+      font-size: 14px;
+      padding-top: 20px;
+      border-top: 1px solid #333;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .footer-container {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+      .footer-box {
+        max-width: 100%;
+      }
+      .map iframe {
+        height: 200px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <footer class="footer">
+    <div class="footer-container">
+      
+      <div class="footer-box footer-logo">
+        <img src="data:image/png;base64,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" alt="Logo">
+        <div class="footer-contact">
+          <p><strong>Phone:</strong> +91 6383791772</p>
+          <p><strong>Email:</strong> support@yourcompany.in</p>
+        </div>
+      </div>
+
+      <div class="footer-box">
+        <h3>Company</h3>
+        <ul>
+          <li><a href="#">About Us</a></li>
+          <li><a href="#">Careers</a></li>
+          <li><a href="#">Press</a></li>
+          <li><a href="#">Blog</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box">
+        <h3>Products</h3>
+        <ul>
+          <li><a href="#">Features</a></li>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">API</a></li>
+          <li><a href="#">Integrations</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-box map">
+        <h3>Address</h3>
+        <p>Chennai Central Railway Station<br>Chennai, Tamil Nadu</p>
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3105.057840321741!2d80.2745!3d13.0827!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5265c47e6c1055%3A0xdea57a27121d60a7!2sChennai%20Central!5e0!3m2!1sen!2sin!4v1680000000000"
+          loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+    </div>
+
+    <div class="footer-bottom">
+      © 2025 Your Company. All rights reserved.
+    </div>
+  </footer>
+
+</body>
+</html>
