@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CHOLAN MESS - GIVE REBIRTH TO YOUR TONGUE</title>
+  <style>
+    body {
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f9f9f9;
+    }
+
+    nav {
+      background-color: #333;
+    }
+
+    nav ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    nav ul li {
+      margin: 0 15px;
+    }
+
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 16px;
+      display: block;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+    }
+
+    nav ul li a:hover {
+      background-color: greenyellow;
+      color: black;
+      border-radius: 4px;
+    }
+
+    .cholan {
+      color: white;
+      text-align: center;
+      background-image: url('cholan mess.jpg');
+      background-size: cover;
+      background-position: center;
+      height: 80vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px;
+    }
+
+    .cholan h1 {
+      font-size: 3em;
+      margin: 0;
+      text-shadow: 2px 2px 6px black;
+    }
+
+    .cholan h2 {
+      font-size: 1.5em;
+      margin: 0;
+      text-shadow: 1px 1px 4px black;
+      font-weight: 400;
+    }
+
+    .btn-menu {
+      background-color: greenyellow;
+      border: none;
+      padding: 15px 40px;
+      font-size: 18px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      width: max-content;
+      margin: 0 auto;
+    }
+
+    .btn-menu:hover {
+      background-color: darkgreen;
+      color: white;
+    }
+
+    .about {
+      color: greenyellow;
+      text-align: center;
+      margin-top: 40px;
+      font-size: 2.5em;
+      font-weight: bold;
+    }
+
+    .about-text {
+      max-width: 900px;
+      margin: 15px auto 40px;
+      font-size: 1.1em;
+      line-height: 1.6;
+      color: #333;
+      padding: 0 20px;
+    }
+
+    .section-title {
+      color: greenyellow;
+      text-align: center;
+      font-size: 2em;
+      margin-top: 60px;
+      font-weight: bold;
+    }
+
+    .menu-items,
+    .gallery,
+    .reviews {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      max-width: 1000px;
+      margin: 20px auto 60px;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 10px;
+    }
+
+    .card h3 {
+      margin: 0;
+      color: darkgreen;
+    }
+
+    .card p {
+      margin: 5px 0;
+      color: #555;
+    }
+
+    .gallery img {
+      width: 200px;
+      height: 250px;
+      border-radius: 10px;
+      object-fit: cover;
+      justify-self: center;
+    }
+
+    .reviews {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      max-width: 900px;
+      margin: 20px auto 60px;
+    }
+
+    .reviews .card {
+      width: 300px;
+      padding: 20px;
+      background-color: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .reviews p {
+      font-style: italic;
+      color: #444;
+    }
+
+    .reviews h4 {
+      text-align: center;
+      color: darkgreen;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    footer {
+      background: #333;
+      color: white;
+      padding: 30px 20px;
+      text-align: center;
+    }
+
+    .footer-contact {
+      max-width: 600px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+
+    .footer-contact p {
+      margin: 5px 0;
+      font-weight: 500;
+    }
+
+    .footer-contact strong {
+      color: greenyellow;
+    }
+
+    .footer-copyright {
+      font-size: 0.9em;
+      color: #aaa;
+    }
+
+    /* Responsive tweaks */
+    @media (max-width: 600px) {
+      .menu-items,
+      .gallery {
+        grid-template-columns: 1fr;
+      }
+
+      .reviews {
+        flex-direction: column;
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <ul>
+      <li><a href="#" class="nav-link">CHOLAN MESS</a></li>
+      <li><a href=".about-section" class="nav-link">About</a></li>
+      <li><a href=".menu-section" class="nav-link">Menu</a></li>
+      <li><a href=".gallery-section" class="nav-link">Gallery</a></li>
+      <li><a href=".reviews-section" class="nav-link">Reviews</a></li>
+      <li><a href=".contact-section" class="nav-link">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section class="cholan">
+    <h1>TASTE AUTHENTIC CHETTINADU FOODS</h1>
+    <h2>GIVE REBIRTH TO YOUR TONGUE</h2>
+    <button class="btn-menu" onclick="document.querySelector('.menu-section').scrollIntoView({behavior: 'smooth'});">
+      OUR MENU
+    </button>
+  </section>
+
+  <section class="about-section">
+    <h1 class="about">About Us</h1>
+    <div class="about-text">
+      <p>CHOLAN MESS WAS OPENED AND OWNED BY P. DHIVAKARAN. IN THE START, IT WAS JUST A CART IN MADURAI, BUT NOW IT
+        IS A RESTAURANT, AND IT ONLY SERVES CHETTINAD DISHES. THE AMBIENCE IS IN A RETRO SETUP. THIS IS THE INFORMATION
+        ABOUT US.</p>
+      <p>OUR SPECIAL ITEMS ARE PORICHA PORATTA, MUTTON KOTTU PORATTA, SEERAGA SAMBA MUTTON BIRYANI, TENDER COCONUT
+        PUDDING, PAYASAM, NOOL PORATTA, PICHI POTA NATU KOLI, CHETTINAD MUTTON GRAVY, GRAPE PULP JUICE, KIZHI PORATTA.
+        THESE ARE OUR SPECIAL ITEMS.</p>
+    </div>
+  </section>
+
+  <section class="menu-section">
+    <h2 class="section-title">OUR MENU</h2>
+    <div class="menu-items">
+      <div class="card">
+        <img src="boti fry.jpg" alt="AATHU KUDAL GRAVY" />
+        <h3>AATHU KUDAL GRAVY</h3>
+        <p>A NORMAL GRAVY MADE UP OF GOAT INTESTINE</p>
+        <p>₹120</p>
+      </div>
+      <div class="card">
+        <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI" />
+        <h3>MUTTON SEERAGA SAMBA BIRIYANI</h3>
+        <p>SPICED AND FLAVORFUL RICE WITH SOFT MUTTON</p>
+        <p>₹200</p>
+      </div>
+      <div class="card">
+        <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
+        <h3>KIZHI POORATTA</h3>
+        <p>A NORMAL POORATTA MARINATED IN CHICKEN OR MUTTON GRAVY</p>
+        <p>₹180</p>
+      </div>
+      <div class="card">
+        <img src="pooricha pooratta.jpg" alt="POORICHA POORATTA" />
+        <h3>POORICHA POORATTA</h3>
+        <p>DEEP FRIED POORATTA</p>
+        <p>₹50 (one set)</p>
+      </div>
+      <div class="card">
+        <img src="chettinaad mutton gravy.jpg" alt="CHETTINAAD MUTTON OR CHICKEN GRAVY" />
+        <h3>CHETTINAAD MUTTON OR CHICKEN GRAVY</h3>
+        <p>VERY SPICY GRAVY WITH MUTTON OR CHICKEN</p>
+        <p>₹230</p>
+      </div>
+      <div class="card">
+        <img src="elanipayasam.jpg" alt="ELANI PAYASAM" />
+        <h3>ELANI PAYASAM</h3>
+        <p>A PAYASAM MADE UP OF TENDER COCONUT</p>
+        <p>₹60</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery-section">
+    <h2 class="section-title">FOOD GALLERY</h2>
+    <div class="gallery">
+      <img class="img" src="boti fry.jpg" alt="Boti fry" />
+      <img class="img" src="kizhi pooratta.jpg" alt="Kizhi pooratta" />
+      <img class="img" src="chettinaad mutton gravy.jpg" alt="Chettinaad mutton or chicken gravy" />
+      <img class="img" src="elanipayasam.jpg" alt="Elani payasam" />
+    </div>
+  </section>
+
+  <section class="reviews-section">
+    <h2 class="section-title">CUSTOMER REVIEWS</h2>
+    <div class="reviews">
+      <div class="card">
+        <p>"The best SOUTH Indian food in town! Their KIZHI POORATTA is amazing."</p>
+        <h4>ARUN</h4>
+      </div>
+      <div class="card">
+        <p>"Authentic flavors and reasonable prices. Love their MUTTON SEERAGA SAMBA BIRIYANI!"</p>
+        <h4>DHIVAKARAN</h4>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="contact-section footer-contact">
+      <h2>Contact Us</h2>
+      <p>CHOLAN MESS<br>ANNA NAGAR<br>TAMIL NADU, India</p>
+      <p>Phone: +91 8939393575</p>
+      <p><strong>Open Hours:</strong> 7:00 AM – 10:00 PM (Monday to Saturday)</p>
+      <p><strong>Closed:</strong> Sundays</p>
+    </div>
+    <p class="footer-copyright">&copy; 2025 CHOLAN MESS. All Rights Reserved.</p>
+  </footer>
+</body>
+
+</html>
