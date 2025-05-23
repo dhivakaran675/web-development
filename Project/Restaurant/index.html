@@ -90,18 +90,26 @@
       color: white;
     }
 
+    /* Common section container for About, Menu, Gallery, Reviews */
+    .section {
+      max-width: 1000px;
+      margin: 60px auto;
+      padding: 0 20px;
+    }
+
+    /* About Us styling */
     .about-us {
       display: flex;
       align-items: center;
-      justify-content: space-between;
-      padding: 50px;
-      background-color: #fff;
       gap: 40px;
+      background-color: #fff;
+      padding: 30px 40px;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     }
 
-    .content {
+    .about-us .content {
       flex: 1;
-      padding-right: 40px;
     }
 
     .about-us h2 {
@@ -140,34 +148,34 @@
       color: #fff;
     }
 
-    .image {
-      flex: 1.2;
+    .about-us .image {
+      flex: 1;
     }
 
-    .image img {
-      height: 400px;
-      width: 800px;
+    .about-us .image img {
+      width: 100%;
+      height: auto;
       border-radius: 15px;
       box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      max-height: 400px;
+      object-fit: cover;
     }
 
+    /* Section titles */
     .section-title {
       color: greenyellow;
       text-align: center;
       font-size: 2em;
-      margin-top: 60px;
       font-weight: bold;
+      margin-bottom: 20px;
     }
 
+    /* Menu, Gallery, Reviews container (same .section container applies) */
     .menu-items,
-    .gallery,
-    .reviews {
+    .gallery {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
       gap: 20px;
-      max-width: 1000px;
-      margin: 20px auto 60px;
-      padding: 0 20px;
     }
 
     .card {
@@ -199,7 +207,8 @@
     }
 
     .gallery img {
-      width: 200px;
+      width: 100%;
+      max-width: 200px;
       height: 250px;
       border-radius: 10px;
       object-fit: cover;
@@ -211,8 +220,6 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 20px;
-      max-width: 900px;
-      margin: 20px auto 60px;
     }
 
     .reviews .card {
@@ -239,55 +246,69 @@
     }
 
     footer {
-  background-color: #111;      /* Very dark gray / near black */
-  color: white;
-  padding: 40px 20px 25px;
-  text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-}
+      background-color: #111;
+      color: white;
+      padding: 40px 20px 25px;
+      text-align: center;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-.footer-container {
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-}
+    .footer-container {
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+    }
 
-.hours-section, .contact-section {
-  margin-bottom: 25px;
-}
+    .hours-section,
+    .contact-section {
+      margin-bottom: 25px;
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
 
-footer h3 {
-  margin-bottom: 12px;
-  font-weight: 600;
-  color: #adff2f;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
+    footer h3 {
+      margin-bottom: 12px;
+      font-weight: 600;
+      color: #adff2f;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
 
-footer p {
-  margin: 6px 0;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #ddd;
-}
+    footer p {
+      margin: 6px 0;
+      font-weight: 500;
+      line-height: 1.5;
+      color: #ddd;
+    }
 
-footer strong {
-  color: #adff2f;
-}
+    footer strong {
+      color: #adff2f;
+    }
 
-.footer-contact p {
-  font-weight: 500;
-}
+    .footer-contact p {
+      font-weight: 500;
+    }
 
-.footer-copyright {
-  font-size: 0.9rem;
-  color: #888;
-  opacity: 0.8;
-}
-
+    .footer-copyright {
+      font-size: 0.9rem;
+      color: #888;
+      opacity: 0.8;
+      margin-top: 15px;
+    }
 
     /* Responsive tweaks */
-    @media (max-width: 600px) {
+    @media (max-width: 900px) {
+      .about-us {
+        flex-direction: column;
+        padding: 20px;
+      }
+      .about-us .image {
+        max-height: 300px;
+      }
+    }
 
+    @media (max-width: 600px) {
       .menu-items,
       .gallery {
         grid-template-columns: 1fr;
@@ -297,6 +318,12 @@ footer strong {
         flex-direction: column;
         align-items: center;
       }
+
+      .hours-section,
+      .contact-section {
+        flex-direction: column;
+        gap: 10px;
+      }
     }
   </style>
 </head>
@@ -305,23 +332,23 @@ footer strong {
   <nav>
     <ul>
       <li><a href="#" class="nav-link">CHOLAN MESS</a></li>
-      <li><a href=".about-section" class="nav-link">About</a></li>
-      <li><a href=".menu-section" class="nav-link">Menu</a></li>
-      <li><a href=".gallery-section" class="nav-link">Gallery</a></li>
-      <li><a href=".reviews-section" class="nav-link">Reviews</a></li>
-      <li><a href=".contact-section" class="nav-link">Contact</a></li>
+      <li><a href="#about" class="nav-link">About</a></li>
+      <li><a href="#menu" class="nav-link">Menu</a></li>
+      <li><a href="#gallery" class="nav-link">Gallery</a></li>
+      <li><a href="#reviews" class="nav-link">Reviews</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
   </nav>
 
   <section class="cholan">
     <h1>TASTE AUTHENTIC CHETTINADU FOODS</h1>
     <h2>GIVE REBIRTH TO YOUR TONGUE</h2>
-    <button class="btn-menu" onclick="document.querySelector('.menu-section').scrollIntoView({behavior: 'smooth'});">
+    <button class="btn-menu" onclick="document.querySelector('#menu').scrollIntoView({behavior: 'smooth'});">
       OUR MENU
     </button>
   </section>
 
-  <section class="about-us">
+  <section class="section about-us" id="about">
     <div class="content">
       <h2>About Us</h2>
       <div class="underline"></div>
@@ -334,10 +361,11 @@ footer strong {
       <button class="story-button">Our Story</button>
     </div>
     <div class="image">
-      <img src="chettinaad.jpg" alt="" />
+      <img src="chettinaad.jpg" alt="Chettinad Dish" />
     </div>
   </section>
-  <section class="menu-section">
+
+  <section class="section menu-section" id="menu">
     <h2 class="section-title">OUR MENU</h2>
     <div class="menu-items">
       <div class="card">
@@ -373,52 +401,62 @@ footer strong {
       <div class="card">
         <img src="elanipayasam.jpg" alt="ELANI PAYASAM" />
         <h3>ELANI PAYASAM</h3>
-        <p>A PAYASAM MADE UP OF TENDER COCONUT</p>
-        <p>₹60</p>
+        <p>SWEET PUDDING WITH ELANEER</p>
+        <p>₹150</p>
       </div>
     </div>
   </section>
 
-  <section class="gallery-section">
+  <section class="section gallery-section" id="gallery">
     <h2 class="section-title">FOOD GALLERY</h2>
     <div class="gallery">
-      <img class="img" src="boti fry.jpg" alt="Boti fry" />
-      <img class="img" src="kizhi pooratta.jpg" alt="Kizhi pooratta" />
-      <img class="img" src="chettinaad mutton gravy.jpg" alt="Chettinaad mutton or chicken gravy" />
-      <img class="img" src="elanipayasam.jpg" alt="Elani payasam" />
+      <img src="aathu kudaal.jpg" alt="AATHU KUDAAL" />
+      <img src="kizhi pooraatta.jpg" alt="KIZHI POORATTA" />
+      <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI" />
+      <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI" />
+      <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
+      <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
     </div>
   </section>
 
-  <section class="reviews-section">
+  <section class="section reviews-section" id="reviews">
     <h2 class="section-title">CUSTOMER REVIEWS</h2>
     <div class="reviews">
       <div class="card">
-        <p>"The best SOUTH Indian food in town! Their KIZHI POORATTA is amazing."</p>
-        <h4>ARUN</h4>
+        <p>"THE FOOD WAS INCREDIBLE AND THE SERVICE WAS FRIENDLY. DEFINITELY RECOMMEND!"</p>
+        <h4>- SARAH M.</h4>
       </div>
       <div class="card">
-        <p>"Authentic flavors and reasonable prices. Love their MUTTON SEERAGA SAMBA BIRIYANI!"</p>
-        <h4>DHIVAKARAN</h4>
+        <p>"AUTHENTIC FLAVORS THAT REMIND ME OF HOME. A MUST-TRY FOR CHEFTINAD FOOD LOVERS."</p>
+        <h4>- JOHN D.</h4>
+      </div>
+      <div class="card">
+        <p>"GREAT ATMOSPHERE AND DELICIOUS DISHES. WILL BE BACK SOON!"</p>
+        <h4>- PRIYA S.</h4>
       </div>
     </div>
   </section>
 
- <footer>
-  <div class="footer-container">
-    <div class="hours-section">
-      <h3>Opening Hours</h3>
-      <p><strong>Open:</strong> 7:00 AM – 10:00 PM (Monday to Saturday)</p>
-      <p><strong>Closed:</strong> Sundays</p>
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="hours-section">
+        <div>
+          <h3>Operating Hours</h3>
+          <p><strong>Monday – Friday:</strong> 10:00 am - 10:00 pm</p>
+          <p><strong>Saturday – Sunday:</strong> 9:00 am - 11:00 pm</p>
+        </div>
+        <div>
+          <h3>Contact Us</h3>
+          <p><strong>Phone:</strong> +91 9876543210</p>
+          <p><strong>Email:</strong> contact@cholanmess.com</p>
+          <p><strong>Address:</strong> 123 Chettinad Street, Madurai, Tamil Nadu</p>
+        </div>
+      </div>
+      <div class="footer-copyright">
+        &copy; 2024 CHOLAN MESS. All rights reserved.
+      </div>
     </div>
-    <div class="contact-section">
-      <h3>Contact Us</h3>
-      <p>CHOLAN MESS<br>ANNA NAGAR<br>TAMIL NADU, India</p>
-      <p>Phone: +91 8939393575</p>
-    </div>
-  </div>
-  <p class="footer-copyright">&copy; 2025 CHOLAN MESS. All Rights Reserved.</p>
-</footer>
-
+  </footer>
 </body>
 
 </html>
