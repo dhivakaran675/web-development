@@ -6,11 +6,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CHOLAN MESS - GIVE REBIRTH TO YOUR TONGUE</title>
   <style>
+    /* Reset and base */
+    * {
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
-      padding: 0;
       background: #f9f9f9;
+      color: #333;
     }
 
     nav {
@@ -90,29 +95,29 @@
       color: white;
     }
 
-    /* Common section container for About, Menu, Gallery, Reviews */
-    .section {
-      max-width: 1000px;
+    /* Universal container */
+    .container {
+      max-width: 960px;
       margin: 60px auto;
-      padding: 0 20px;
-    }
-
-    /* About Us styling */
-    .about-us {
-      display: flex;
-      align-items: center;
-      gap: 40px;
-      background-color: #fff;
+      background: white;
       padding: 30px 40px;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
+      box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .about-us .content {
-      flex: 1;
+    /* About Us */
+    #about {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      flex-wrap: wrap;
     }
 
-    .about-us h2 {
+    #about .content {
+      flex: 1 1 400px;
+    }
+
+    #about h2 {
       color: greenyellow;
       font-size: 2.5rem;
       margin-bottom: 10px;
@@ -123,13 +128,13 @@
       height: 4px;
       background-color: greenyellow;
       margin-bottom: 20px;
+      border-radius: 2px;
     }
 
-    .about-us p {
+    #about p {
       font-size: 1.1rem;
       line-height: 1.6;
       margin-bottom: 20px;
-      color: #333;
     }
 
     .story-button {
@@ -148,41 +153,40 @@
       color: #fff;
     }
 
-    .about-us .image {
-      flex: 1;
+    #about .image {
+      flex: 1 1 300px;
     }
 
-    .about-us .image img {
+    #about .image img {
       width: 100%;
-      height: auto;
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
       max-height: 400px;
       object-fit: cover;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
     }
 
-    /* Section titles */
-    .section-title {
+    /* Section headings */
+    h2.section-title {
       color: greenyellow;
+      font-weight: 700;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
       text-align: center;
-      font-size: 2em;
-      font-weight: bold;
-      margin-bottom: 20px;
     }
 
-    /* Menu, Gallery, Reviews container (same .section container applies) */
+    /* Menu, Gallery, Reviews */
     .menu-items,
     .gallery {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 25px;
     }
 
     .card {
       background: white;
+      border-radius: 12px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
       padding: 15px;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
       text-align: center;
       display: flex;
       flex-direction: column;
@@ -191,9 +195,9 @@
 
     .card img {
       width: 100%;
-      height: 200px;
+      height: 180px;
+      border-radius: 12px;
       object-fit: cover;
-      border-radius: 10px;
     }
 
     .card h3 {
@@ -202,15 +206,14 @@
     }
 
     .card p {
-      margin: 5px 0;
+      margin: 0;
       color: #555;
     }
 
     .gallery img {
+      border-radius: 12px;
+      height: 220px;
       width: 100%;
-      max-width: 200px;
-      height: 250px;
-      border-radius: 10px;
       object-fit: cover;
       justify-self: center;
     }
@@ -219,15 +222,15 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
-      gap: 20px;
+      gap: 25px;
     }
 
     .reviews .card {
-      width: 300px;
+      width: 320px;
       padding: 20px;
-      background-color: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 12px;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
@@ -236,15 +239,17 @@
     .reviews p {
       font-style: italic;
       color: #444;
+      margin-bottom: 15px;
     }
 
     .reviews h4 {
       text-align: center;
       color: darkgreen;
-      margin-top: 15px;
-      font-weight: bold;
+      margin: 0;
+      font-weight: 700;
     }
 
+    /* Footer */
     footer {
       background-color: #111;
       color: white;
@@ -286,25 +291,16 @@
       color: #adff2f;
     }
 
-    .footer-contact p {
-      font-weight: 500;
-    }
-
-    .footer-copyright {
-      font-size: 0.9rem;
-      color: #888;
-      opacity: 0.8;
-      margin-top: 15px;
-    }
-
-    /* Responsive tweaks */
-    @media (max-width: 900px) {
-      .about-us {
+    /* Responsive */
+    @media (max-width: 600px) {
+      #about {
         flex-direction: column;
-        padding: 20px;
+        text-align: center;
       }
-      .about-us .image {
-        max-height: 300px;
+
+      #about .content,
+      #about .image {
+        flex: 1 1 100%;
       }
     }
 
@@ -348,7 +344,8 @@
     </button>
   </section>
 
-  <section class="section about-us" id="about">
+  <!-- About Us -->
+  <section id="about" class="container">
     <div class="content">
       <h2>About Us</h2>
       <div class="underline"></div>
@@ -365,7 +362,8 @@
     </div>
   </section>
 
-  <section class="section menu-section" id="menu">
+  <!-- Menu -->
+  <section id="menu" class="container">
     <h2 class="section-title">OUR MENU</h2>
     <div class="menu-items">
       <div class="card">
@@ -407,11 +405,12 @@
     </div>
   </section>
 
-  <section class="section gallery-section" id="gallery">
+  <!-- Gallery -->
+  <section id="gallery" class="container">
     <h2 class="section-title">FOOD GALLERY</h2>
     <div class="gallery">
-      <img src="aathu kudaal.jpg" alt="AATHU KUDAAL" />
-      <img src="kizhi pooraatta.jpg" alt="KIZHI POORATTA" />
+      <img src="boti fry.jpg" alt="AATHU KUDAAL" />
+      <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
       <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI" />
       <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI" />
       <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
@@ -419,20 +418,21 @@
     </div>
   </section>
 
-  <section class="section reviews-section" id="reviews">
+  <!-- Reviews -->
+  <section id="reviews" class="container">
     <h2 class="section-title">CUSTOMER REVIEWS</h2>
     <div class="reviews">
       <div class="card">
         <p>"THE FOOD WAS INCREDIBLE AND THE SERVICE WAS FRIENDLY. DEFINITELY RECOMMEND!"</p>
-        <h4>- SARAH M.</h4>
+        <h4>THOR</h4>
       </div>
       <div class="card">
         <p>"AUTHENTIC FLAVORS THAT REMIND ME OF HOME. A MUST-TRY FOR CHEFTINAD FOOD LOVERS."</p>
-        <h4>- JOHN D.</h4>
+        <h4>IRON MAN</h4>
       </div>
       <div class="card">
         <p>"GREAT ATMOSPHERE AND DELICIOUS DISHES. WILL BE BACK SOON!"</p>
-        <h4>- PRIYA S.</h4>
+        <h4>CAPTAIN AMERICA</h4>
       </div>
     </div>
   </section>
