@@ -11,6 +11,10 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       margin: 0;
@@ -20,6 +24,9 @@
 
     nav {
       background-color: #333;
+      position: sticky;
+      top: 0;
+      z-index: 100;
     }
 
     nav ul {
@@ -48,6 +55,77 @@
       background-color: greenyellow;
       color: black;
       border-radius: 4px;
+    }
+
+    /* Hamburger toggle button */
+    .hamburger {
+      display: none;
+      flex-direction: column;
+      cursor: pointer;
+      position: absolute;
+      right: 20px;
+      top: 15px;
+      width: 28px;
+      height: 22px;
+      justify-content: space-between;
+      z-index: 110;
+    }
+
+    .hamburger div {
+      background-color: white;
+      height: 3px;
+      border-radius: 2px;
+      transition: all 0.3s ease;
+    }
+
+    /* When hamburger active (toggle animation) */
+    .hamburger.active div:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+      transform: rotate(-45deg) translate(6px, -6px);
+    }
+
+    /* Responsive for ≤600px */
+    @media (max-width: 600px) {
+      nav ul {
+        flex-direction: column;
+        background-color: #333;
+        position: fixed;
+        top: 50px;
+        /* below nav height */
+        right: 0;
+        width: 200px;
+        height: calc(100vh - 50px);
+        padding-top: 20px;
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+        box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+      }
+
+      nav ul.show {
+        transform: translateX(0);
+      }
+
+      nav ul li {
+        margin: 15px 0;
+        text-align: right;
+        padding-right: 20px;
+      }
+
+      .hamburger {
+        display: flex;
+      }
+
+      /* Hide normal menu links (nav ul) by default on mobile, show only when toggle is active */
+      nav ul li a {
+        font-size: 18px;
+      }
     }
 
     .cholan {
@@ -88,6 +166,10 @@
       transition: background-color 0.3s ease;
       width: max-content;
       margin: 0 auto;
+      text-decoration: none;
+      color: black;
+      display: inline-block;
+      text-align: center;
     }
 
     .btn-menu:hover {
@@ -291,6 +373,11 @@
       color: #adff2f;
     }
 
+    .footer-copyright {
+      font-size: 0.9rem;
+      color: #888;
+    }
+
     /* Responsive */
     @media (max-width: 600px) {
       #about {
@@ -302,9 +389,7 @@
       #about .image {
         flex: 1 1 100%;
       }
-    }
 
-    @media (max-width: 600px) {
       .menu-items,
       .gallery {
         grid-template-columns: 1fr;
@@ -327,136 +412,141 @@
 <body>
   <nav>
     <ul>
-      <li><a href="#" class="nav-link">CHOLAN MESS</a></li>
+      <li><a href="/" class="nav-link">CHOLAN MESS</a></li>
       <li><a href="#about" class="nav-link">About</a></li>
       <li><a href="#menu" class="nav-link">Menu</a></li>
       <li><a href="#gallery" class="nav-link">Gallery</a></li>
       <li><a href="#reviews" class="nav-link">Reviews</a></li>
-      <li><a href="#contact" class="nav-link">Contact</a></li>
     </ul>
+
+    <!-- Hamburger toggle -->
+    <div class="hamburger" id="hamburger">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
   </nav>
 
   <section class="cholan">
     <h1>TASTE AUTHENTIC CHETTINADU FOODS</h1>
     <h2>GIVE REBIRTH TO YOUR TONGUE</h2>
-    <button class="btn-menu" onclick="document.querySelector('#menu').scrollIntoView({behavior: 'smooth'});">
-      OUR MENU
-    </button>
+    <a href="#menu" class="btn-menu">OUR STORY</a>
   </section>
 
-  <!-- About Us -->
   <section id="about" class="container">
     <div class="content">
-      <h2>About Us</h2>
+      <h2>ABOUT US</h2>
       <div class="underline"></div>
-      <p>CHOLAN MESS WAS OPENED AND OWNED BY P. DHIVAKARAN. IN THE START, IT WAS JUST A CART IN MADURAI, BUT NOW IT
-        IS A RESTAURANT, AND IT ONLY SERVES CHETTINAD DISHES. THE AMBIENCE IS IN A RETRO SETUP. THIS IS THE INFORMATION
-        ABOUT US.</p>
-      <p>OUR SPECIAL ITEMS ARE PORICHA PORATTA, MUTTON KOTTU PORATTA, SEERAGA SAMBA MUTTON BIRYANI, TENDER COCONUT
-        PUDDING, PAYASAM, NOOL PORATTA, PICHI POTA NATU KOLI, CHETTINAD MUTTON GRAVY, GRAPE PULP JUICE, KIZHI PORATTA.
-        THESE ARE OUR SPECIAL ITEMS.</p>
-      <button class="story-button">Our Story</button>
+      <p>
+        Our mission is to serve authentic Chettinadu cuisine, known for its bold
+        flavors, aromatic spices, and traditional cooking methods. Every dish
+        is prepared with care to bring a genuine taste of Chettinadu to your
+        table.
+      </p>
+      <button class="story-button">Read More</button>
     </div>
     <div class="image">
-      <img src="chettinaad.jpg" alt="Chettinad Dish" />
+      <img src="chettinaad.jpg" alt="About Us" />
     </div>
   </section>
 
-  <!-- Menu -->
   <section id="menu" class="container">
     <h2 class="section-title">OUR MENU</h2>
     <div class="menu-items">
       <div class="card">
-        <img src="boti fry.jpg" alt="AATHU KUDAL GRAVY" />
-        <h3>AATHU KUDAL GRAVY</h3>
-        <p>A NORMAL GRAVY MADE UP OF GOAT INTESTINE</p>
-        <p>₹120</p>
-      </div>
-      <div class="card">
-        <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI" />
-        <h3>MUTTON SEERAGA SAMBA BIRIYANI</h3>
+        <img src="mutton seeragasamba biriyani.jpg" alt="Mutton seeragasamba biriyani" />
+        <h3>Mutton seeragasamba biriyani</h3>
         <p>SPICED AND FLAVORFUL RICE WITH SOFT MUTTON</p>
-        <p>₹200</p>
       </div>
       <div class="card">
-        <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
-        <h3>KIZHI POORATTA</h3>
-        <p>A NORMAL POORATTA MARINATED IN CHICKEN OR MUTTON GRAVY</p>
-        <p>₹180</p>
-      </div>
-      <div class="card">
-        <img src="pooricha pooratta.jpg" alt="POORICHA POORATTA" />
-        <h3>POORICHA POORATTA</h3>
-        <p>DEEP FRIED POORATTA</p>
-        <p>₹50 (one set)</p>
-      </div>
-      <div class="card">
-        <img src="chettinaad mutton gravy.jpg" alt="CHETTINAAD MUTTON OR CHICKEN GRAVY" />
-        <h3>CHETTINAAD MUTTON OR CHICKEN GRAVY</h3>
+        <img src="chettinaad mutton gravy.jpg" alt="Chettinaad mutton or chicken gravy" />
+        <h3>Chettinaad mutton or chicken gravy</h3>
         <p>VERY SPICY GRAVY WITH MUTTON OR CHICKEN</p>
-        <p>₹230</p>
       </div>
       <div class="card">
-        <img src="elanipayasam.jpg" alt="ELANI PAYASAM" />
-        <h3>ELANI PAYASAM</h3>
-        <p>SWEET PUDDING WITH ELANEER</p>
-        <p>₹150</p>
+        <img src="boti fry.jpg" alt="Aatu kudal" />
+        <h3>Aatu kudal</h3>
+        <p>A NORMAL GRAVY MADE UP OF GOAT INTESTINE</p>
+      </div>
+      <div class="card">
+        <img src="elanipayasam.jpg" alt="Elani payasam" />
+        <h3>Elanipayasam</h3>
+        <p>A PAYASAM MADE UP OF TENDER COCONUT</p>
+      </div>
+      <div class="card">
+        <img src="pooricha pooratta.jpg" alt="Pooricha pooratta" />
+        <h3>Pooricha pooratta</h3>
+        <p>DEEP FRIED POORATTA</p>
+      </div>
+      <div class="card">
+        <img src="kizhi pooratta.jpg" alt="Kizhi pooratta" />
+        <h3>Kizhi pooratta</h3>
+        <p>A NORMAL POORATTA MARINATED IN CHICKEN OR MUTTON GRAVY</p>
       </div>
     </div>
   </section>
 
-  <!-- Gallery -->
   <section id="gallery" class="container">
     <h2 class="section-title">FOOD GALLERY</h2>
     <div class="gallery">
-      <img src="boti fry.jpg" alt="AATHU KUDAAL" />
-      <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
-      <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI" />
-      <img src="mutton seeragasamba biriyani.jpg" alt="MUTTON SEERAGA SAMBA BIRIYANI" />
-      <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
-      <img src="kizhi pooratta.jpg" alt="KIZHI POORATTA" />
+      <img src="pooricha pooratta.jpg" alt="pooricha pooratta" />
+      <img src="kizhi pooratta.jpg" alt="kizhi pooratta" />
+      <img src="chettinaad mutton gravy.jpg" alt="chettinaad mutton or chicken gravy" />
+      <img src="elanipayasam.jpg" alt="elanipayasam" />
+      <img src="mutton seeragasamba biriyani.jpg" alt="Mutton seeragasamba biriyani">
+      <img src="boti fry.jpg" alt="aatu kudal">
     </div>
   </section>
 
-  <!-- Reviews -->
   <section id="reviews" class="container">
-    <h2 class="section-title">CUSTOMER REVIEWS</h2>
+    <h2 class="section-title">REVIEWS</h2>
     <div class="reviews">
       <div class="card">
-        <p>"THE FOOD WAS INCREDIBLE AND THE SERVICE WAS FRIENDLY. DEFINITELY RECOMMEND!"</p>
-        <h4>THOR</h4>
+        <p>"The best Chettinad food I've ever tasted! Highly recommend."</p>
+        <h4>spider man</h4>
       </div>
       <div class="card">
-        <p>"AUTHENTIC FLAVORS THAT REMIND ME OF HOME. A MUST-TRY FOR CHEFTINAD FOOD LOVERS."</p>
-        <h4>IRON MAN</h4>
+        <p>"Amazing flavors and excellent service. Will come back again!"</p>
+        <h4>iron man</h4>
       </div>
       <div class="card">
-        <p>"GREAT ATMOSPHERE AND DELICIOUS DISHES. WILL BE BACK SOON!"</p>
-        <h4>CAPTAIN AMERICA</h4>
+        <p>"Authentic taste and warm ambiance. Loved every bite."</p>
+        <h4>captain america</h4>
       </div>
     </div>
   </section>
 
-  <footer id="contact">
+  <footer>
     <div class="footer-container">
       <div class="hours-section">
         <div>
-          <h3>Operating Hours</h3>
-          <p><strong>Monday – Friday:</strong> 10:00 am - 10:00 pm</p>
-          <p><strong>Saturday – Sunday:</strong> 9:00 am - 11:00 pm</p>
+          <h3>Hours</h3>
+          <p><strong>Monday - Saturday:</strong> 9am - 9pm</p>
+          <p><strong>Sunday:</strong> Closed</p>
         </div>
         <div>
-          <h3>Contact Us</h3>
-          <p><strong>Phone:</strong> +91 9876543210</p>
-          <p><strong>Email:</strong> contact@cholanmess.com</p>
-          <p><strong>Address:</strong> 123 Chettinad Street, Madurai, Tamil Nadu</p>
+          <h3>Contact</h3>
+          <p>Phone: +91 12345 67890</p>
+          <p>Email: info@cholanmess.com</p>
         </div>
       </div>
-      <div class="footer-copyright">
-        &copy; 2024 CHOLAN MESS. All rights reserved.
-      </div>
     </div>
+
+    <p class="footer-copyright">
+      &copy; 2025 CHOLAN MESS. All rights reserved.
+    </p>
   </footer>
+
+  <script>
+    // Hamburger toggle functionality
+    const hamburger = document.getElementById('hamburger');
+    const navUl = document.querySelector('nav ul');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      navUl.classList.toggle('show');
+    });
+  </script>
 </body>
 
 </html>
